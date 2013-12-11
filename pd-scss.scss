@@ -1,3 +1,5 @@
 @import "./scss/mixins.scss";
 
-@import "./scss/normalize.scss";
+@mixin normalize {
+	@import "./scss/normalize.scss";
+}
