@@ -25,7 +25,7 @@ $default-box-shadow	:	set-default-box-shadow();
 	@include normalize;
 }
 
-@mixin load-breakpoints($list:400px 600px 800px 1000px 1300px) {
+@mixin load-breakpoints($list:400px 600px 800px 960px 1300px) {
 	$breakpoints:setBreakpoints($list);
 }
 
