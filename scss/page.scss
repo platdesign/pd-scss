@@ -18,7 +18,7 @@
 			@include breakpoint($index) {
 			
 				@if $index == 1 {
-					padding:0 .75em;
+					//padding:0 .75em;
 				}
 			
 				$width:nth($breakpoint, 2);
