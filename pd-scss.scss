@@ -1,5 +1,66 @@
 @import "./scss/mixins.scss";
+@import "./scss/normalize.scss";
+@import "./scss/breakpoints.scss";
+@import "./scss/page.scss";
+@import "./scss/grid.scss";
 
-@mixin normalize {
-	@import "./scss/normalize.scss";
+@import "./scss/creators/btn.scss";
+@import "./scss/creators/block.scss";
+@import "./scss/creators/img.scss";
+@import "./scss/creators/hint.scss";
+
+@function set-default-box-shadow($set:0 0 5px 0 rgba(0,0,0,.3)) {
+	$default-box-shadow:$set;
+	@return $default-box-shadow;
 }
+
+@function default-box-shadow() {
+	@return $default-box-shadow;
+}
+
+$default-box-shadow	:	set-default-box-shadow();
+
+
+@mixin load-reset {
+	@include normalize;
+}
+
+@mixin load-breakpoints($list:400px 600px 800px 1000px 1300px) {
+	$breakpoints:setBreakpoints($list);
+}
+
+@mixin load-page {
+	@include page-init;
+}
+
+
+@mixin load-btn {
+	@include btn-init;
+}
+
+@mixin load-img {
+	@include img-init;
+}
+
+@mixin load-hint {
+	@include hint-init;
+}
+
+@mixin load-block {
+	@include block-init;
+}
+
+@mixin load-grid($spacer:1em) {
+	$grid-spacer:$spacer;
+	@include grid-init;
+}
+
+@mixin load-font-beautifier {
+	body {
+		@include font-smoothing;
+		@include text-rendering;
+		@include hyphens;
+	}
+	
+}
+

@@ -1,48 +1,34 @@
-@import "media.scss";
 
-.page {
-	margin:0 auto;
-	width:media-width(D);
-
-	@include breakpoint-a {
+@mixin page($width) {
+	@if $width > 0 {
+		width:$width;
+	} @else {
 		width:100%;
-		padding:0 1em;
 	}
+}
+
+@mixin page-init {
+	.page {
 	
-	@include breakpoint-b {
-		width:$breakpoint-width-a;
-	}
-	@include breakpoint-c {
-		width:$breakpoint-width-b;
-	}
-	@include breakpoint-d {
-		width:$breakpoint-width-c;
-	}
-	@include breakpoint-e {
-		width:$breakpoint-width-d;
+		margin: 0 auto;
+	
+		@each $breakpoint in breakpoints() {
+			$index:nth($breakpoint, 1);
+			
+			@include breakpoint($index) {
+			
+				@if $index == 1 {
+					padding:0 .75em;
+				}
+			
+				$width:nth($breakpoint, 2);
+			
+				@include page($width);
+			
+			}
+		}
+	
 	}
 	
 }
 
-
-.responsive-fontsize {
-	@include breakpoint-a {
-		font-size:.9em;
-	}
-	
-	@include breakpoint-b {
-		font-size:1em;
-	}
-	
-	@include breakpoint-c {
-		font-size:1em;
-	}
-	
-	@include breakpoint-d {
-		font-size:1.3em;
-	}
-	
-	@include breakpoint-e {
-		font-size:1.4em;
-	}
-}
