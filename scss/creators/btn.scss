@@ -1,0 +1,75 @@
+
+
+
+	@mixin btn-setColor($color) {
+		background-color:$color;
+		@include gradient(top, lighten($color, 5%), darken($color, 5%));
+		color:best-font-color($color);
+		border-color: darken($color, 3%);
+	}
+
+	@mixin btn($name:false, $color:false) {
+		@if $name {
+			@include extend-package(btn, $name) {
+				@if $color {
+					@include btn-setColor($color);
+				}
+			
+				@content;
+			}
+		} @else {
+			@extend #{package-placeholder(btn)};
+		}
+	}
+
+
+
+	@mixin btn-init {
+		
+		@include create-package(btn) {
+			@include btn-setColor(#eaeaea);
+			@include border-radius(3px);
+			border-width:1px;
+			border-style:solid;
+			
+			font-size:1em;
+			padding: .3em .5em;
+			line-height:1;
+			margin:0;
+			vertical-align:baseline;
+			outline:none;
+			min-width:4em;
+			cursor:default;
+			margin:0 0 .25em 0;
+			
+			.icon {
+				width:1.3em;
+				font-size:1em;
+				vertical-align:bottom;
+			}
+			
+			
+			
+			&:hover {
+				@include box-shadow(inset 0 0 1em 0 rgba(255,255,255,.5));
+			}
+			&:active {
+				@include box-shadow(inset 0 0 .2em 0 rgba(0,0,0,.4));
+			}
+		}
+		
+
+		/* DEFAULT Buttons */
+		
+
+
+		/* btn-large */
+		@include btn(large) {
+			font-size:1.2em;
+		}
+		
+	}
+	
+	
+
+
