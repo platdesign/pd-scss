@@ -51,7 +51,7 @@ $default-box-shadow	:	set-default-box-shadow();
 }
 
 @mixin load-grid($spacer:1em) {
-	$grid-spacer:$spacer;
+	$grid-spacer: grid-setSpacer($spacer);
 	@include grid-init;
 }
 

@@ -1,10 +1,15 @@
 
 $grid-spacer:1em;
+@function grid-setSpacer($spacer) {
+	$grid-spacer:$spacer;
+	@return $grid-spacer;
+}
 
 @mixin grid-col($a, $b) {
 	
 	.col-#{$a}-#{$b} {
 		width:percentage($a/$b);
+		//padding: 0 ($grid-spacer*2)/($b + 1);
 	}
 	
 }
@@ -52,6 +57,7 @@ $grid-spacer:1em;
 			@include wildcard(col) {
 				width:100%;
 				padding-bottom:$grid-spacer;
+				
 			}
 		
 		}
@@ -61,6 +67,7 @@ $grid-spacer:1em;
 			@include wildcard(col) {
 				width:100%;
 				padding-bottom:$grid-spacer;
+				
 			}
 		
 		}
