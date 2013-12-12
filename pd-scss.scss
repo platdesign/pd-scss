@@ -8,6 +8,8 @@
 @import "./scss/creators/block.scss";
 @import "./scss/creators/img.scss";
 @import "./scss/creators/hint.scss";
+@import "./scss/creators/nav.scss";
+
 
 @function set-default-box-shadow($set:0 0 5px 0 rgba(0,0,0,.3)) {
 	$default-box-shadow:$set;
@@ -27,6 +29,7 @@ $default-box-shadow	:	set-default-box-shadow();
 	@include load-breakpoints;
 	@include load-grid;
 	@include load-page;
+	@include load-nav;
 	@include load-btn;
 	@include load-block;
 	@include load-img;
@@ -60,6 +63,10 @@ $default-box-shadow	:	set-default-box-shadow();
 
 @mixin load-block {
 	@include block-init;
+}
+
+@mixin load-nav {
+	@include nav-init;
 }
 
 @mixin load-grid($spacer:1em) {

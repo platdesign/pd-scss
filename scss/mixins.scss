@@ -289,7 +289,7 @@
 }
 
 @mixin extend-package($package, $name) {
-	.#{$package}-#{$name} {
+	.#{$package}-#{$name}, [class^="#{$package}-#{$name}"], [class*=" #{$package}-#{$name}"] {
 		@extend #{package-placeholder($name)};
 		@content;
 	}
