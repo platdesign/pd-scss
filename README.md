@@ -1,5 +1,4 @@
 #pd-scss#
-====
 
 A bunch of scss mixins and generators to ease bootstrapping a project.
 
