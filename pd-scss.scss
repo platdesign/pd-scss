@@ -21,6 +21,18 @@
 $default-box-shadow	:	set-default-box-shadow();
 
 
+@mixin load-all {
+	@include load-reset;
+	@include load-font-beautifier;
+	@include load-breakpoints;
+	@include load-grid;
+	@include load-page;
+	@include load-btn;
+	@include load-block;
+	@include load-img;
+	@include load-hint;
+}
+
 @mixin load-reset {
 	@include normalize;
 }
