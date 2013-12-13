@@ -1,11 +1,13 @@
 
-@mixin prefix($key, $val, $prefixes) {
+@mixin prefix($key, $val, $prefixes, $prefixless:true) {
 	
 	@each $prefix in $prefixes {
 		-#{$prefix}-#{$key}: $val;
 	}
+	@if $prefixless {
+		#{$key}:$val;
+	}
 	
-	#{$key}:$val;
 }
 
 
@@ -179,9 +181,6 @@
 
 
 
-/*
-	wildcard-classnames
-*/
 
 @mixin class-beginns-with($name) {
 	[class*="#{$name}"] {
@@ -218,18 +217,18 @@
 
 
 @mixin font-smoothing($value:antialiased) {
-	@include prefix(font-smoothing, $value, webkit moz ms);
+	@include prefix(font-smoothing, $value, webkit moz ms, false);
 	-moz-osx-font-smoothing: grayscale;
 }
 
 
 @mixin hyphens($value:auto) { 
 	// none | manual | auto  
-	@include prefix(hyphens, $value, webkit moz ms o);
+	@include prefix(hyphens, $value, moz ms o, false);
 }
 
 @mixin text-rendering($value:optimizeLegibility) {
-	@include prefix(text-rendering, $value, webkit moz ms o);
+	@include prefix(text-rendering, $value, moz ms o);
 }
 
 
