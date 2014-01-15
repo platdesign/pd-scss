@@ -9,7 +9,7 @@
 @import "./scss/creators/img.scss";
 @import "./scss/creators/hint.scss";
 @import "./scss/creators/nav.scss";
-
+@import "./scss/creators/flyout.scss";
 
 @function set-default-box-shadow($set:0 0 5px 0 rgba(0,0,0,.3)) {
 	$default-box-shadow:$set;
