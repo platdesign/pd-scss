@@ -164,6 +164,8 @@ $flyout-arrow-width:11px;
 	@extend %flyout-top;
 	@extend %flyout-to-right;
 	@include flyout-arrow-bottom;
+
+	@content;
 }
 
 @mixin flyout-bl($color:white) {
@@ -174,6 +176,8 @@ $flyout-arrow-width:11px;
 	@extend %flyout-bottom;
 	@extend %flyout-to-left;
 	@include flyout-arrow-top;
+
+	@content;
 }
 
 @mixin flyout-br($color:white) {
@@ -184,6 +188,8 @@ $flyout-arrow-width:11px;
 	@extend %flyout-bottom;
 	@extend %flyout-to-right;
 	@include flyout-arrow-top;
+
+	@content;
 }
 
 @mixin flyout-lt($color:white) {
@@ -194,6 +200,8 @@ $flyout-arrow-width:11px;
 	@extend %flyout-left;
 	@extend %flyout-to-top;
 	@include flyout-arrow-right;
+
+	@content;
 }
 
 @mixin flyout-lb($color:white) {
@@ -204,6 +212,8 @@ $flyout-arrow-width:11px;
 	@extend %flyout-left;
 	@extend %flyout-to-bottom;
 	@include flyout-arrow-right;
+
+	@content;
 }
 
 @mixin flyout-rt($color:white) {
@@ -214,6 +224,8 @@ $flyout-arrow-width:11px;
 	@extend %flyout-right;
 	@extend %flyout-to-top;
 	@include flyout-arrow-left;
+
+	@content;
 }
 
 @mixin flyout-rb($color:white) {
@@ -224,6 +236,8 @@ $flyout-arrow-width:11px;
 	@extend %flyout-right;
 	@extend %flyout-to-bottom;
 	@include flyout-arrow-left;
+
+	@content;
 }
 
 
