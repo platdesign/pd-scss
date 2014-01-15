@@ -5,22 +5,12 @@ $grid-spacer:1em;
 	@return $grid-spacer;
 }
 
-%grid-col-before {
-	&:before {
-		content:".";
-		opacity:0;
-		height:0;
-		line-height:0;
-		position:relative;
-		visibility: hidden;
-		display:block;
-	}
-}
+
 
 @mixin grid-col($a, $b) {
 	
 	.col-#{$a}-#{$b} {
-		@extend %grid-col-before;
+		
 		width:percentage($a/$b);
 		//padding: 0 ($grid-spacer*2)/($b + 1);
 	}
