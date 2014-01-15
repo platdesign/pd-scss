@@ -20,7 +20,7 @@ $grid-spacer:1em;
 @mixin grid-col($a, $b) {
 	
 	.col-#{$a}-#{$b} {
-		@extend: %grid-col-before;
+		@extend %grid-col-before;
 		width:percentage($a/$b);
 		//padding: 0 ($grid-spacer*2)/($b + 1);
 	}
