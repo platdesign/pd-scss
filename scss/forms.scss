@@ -56,7 +56,7 @@ $form-el-outline-color:#3399FF;
 
 %form-el-textarea {
 	@extend %form-el-text;
-	@extend %form-el-outline;
+	//@extend %form-el-outline;
 	@extend %form-el-bg;
 	
 	min-height:6em;
