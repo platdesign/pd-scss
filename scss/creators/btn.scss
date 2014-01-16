@@ -54,7 +54,7 @@
 		}
 		
 		@include btn(bar) {
-			padding:0;
+			padding:0!important;
 			background:transparent;
 			
 			@include display-inline-flex;
