@@ -3,7 +3,7 @@
 
 	@mixin btn-setColor($color) {
 		background-color:$color;
-		@include gradient(top, lighten($color, 5%), darken($color, 5%));
+		//@include gradient(top, lighten($color, 5%), darken($color, 5%));
 		color:best-font-color($color);
 		border-color: darken($color, 3%);
 	}
@@ -53,6 +53,35 @@
 			display:inline-block;
 		}
 		
+		@include btn(bar) {
+			padding:0;
+			background:transparent;
+			
+			@include display-inline-flex;
+			overflow:hidden;
+		
+			button {
+				@include flex(1 1 auto);
+				@include border-radius(0);
+		
+				border-left:none;
+				border-top:none;
+				border-bottom:none;
+				
+				&:last-child {
+					border-right:none;
+				}
+			}
+		
+			&:hover, &.active {
+				background:transparent;
+			}
+		
+		}
+		
+		@include btn(bar-stretch) {
+			@include display-flex;
+		}
 
 		/* DEFAULT Buttons */
 		
