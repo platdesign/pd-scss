@@ -287,10 +287,16 @@
 	}
 }
 
-@mixin extend-package($package, $name) {
-	.#{$package}-#{$name}, [class^="#{$package}-#{$name}"], [class*=" #{$package}-#{$name}"] {
-		@extend #{package-placeholder($name)};
-		@content;
+@mixin extend-package($package, $name:false) {
+	@if $name{
+		.#{$package}-#{$name}, [class^="#{$package}-#{$name}"], [class*=" #{$package}-#{$name}"] {
+			@extend #{package-placeholder($name)};
+			@content;
+		}
+	} @else {
+		@include create-package($package) {
+			@content;
+		}
 	}
 }
 

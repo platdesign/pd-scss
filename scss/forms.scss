@@ -93,7 +93,7 @@ $form-el-outline-color:#3399FF;
 %form-el-button {
 	@extend %form-el-padding;
 	@extend %form-el-border;
-	@extend %form-el-outline;
+	//@extend %form-el-outline;
 	@extend %form-el-bg;
 }
 
@@ -132,9 +132,7 @@ input[type="checkbox"] {
 	@extend %form-el-checkbox;
 }
 
-button, input[type="button"] {
-	@extend %form-el-button;
-}
+
 
 input[type="search"] {
 	@extend %form-el;
