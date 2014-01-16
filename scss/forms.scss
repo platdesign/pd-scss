@@ -108,7 +108,7 @@ $form-el-outline-color:#3399FF;
 
 
 // Text
-input[type=text], input[type=password] {
+input[type=text], input[type=password], input[type=email] {
 	@extend %form-el-text;
 }
 
