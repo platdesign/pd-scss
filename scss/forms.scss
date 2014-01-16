@@ -1,7 +1,7 @@
 $form-el-outline-color:#3399FF;
 
 %form-el {
-	font-size:13px;
+	//font-size:13px;
 	line-height:normal;
 }
 
@@ -30,6 +30,7 @@ $form-el-outline-color:#3399FF;
 %form-el-outline {
 	outline:none;
 	
+	/*
 	&:focus {
 		@include transition(box-shadow .2s);
 		@include box-shadow(#{
@@ -37,6 +38,7 @@ $form-el-outline-color:#3399FF;
 			0 0 1px 0 transparentize($form-el-outline-color, .1)
 		});
 	}
+	*/
 }
 
 
@@ -56,7 +58,7 @@ $form-el-outline-color:#3399FF;
 
 %form-el-textarea {
 	@extend %form-el-text;
-	//@extend %form-el-outline;
+	@extend %form-el-outline;
 	@extend %form-el-bg;
 	
 	min-height:6em;
