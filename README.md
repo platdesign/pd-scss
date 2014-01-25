@@ -1,15 +1,24 @@
 #pd-scss#
 
-A little scss framework that only loads, what you really need.
+A little scss framework.
+
+Compile only that parts to your css-file what you really need!
 
 ##Install##
-`bower install pd-scss --save-dev`
+**Bower:** `bower install pd-scss --save-dev`
 
-##Loader##
+**Git:** `git clone https://github.com/platdesign/pd-scss`
+
+**Download:** [Zip](https://github.com/platdesign/pd-scss/archive/master.zip)
+
+##Docs##
+A little documentation of pd-scss.
+
+###Loader###
 
 - `@include load-all;`
 	
-	Loads all available modules of pd-scss.
+	Loads all available modules of pd-scss. (Do you really need all?)
 	
 - `@include load-reset;`
 
@@ -59,9 +68,9 @@ For the next ones have a look at the 'creators'-section.
 - `@include load-block;`
 
 
-##Creators##
+###Creators###
 
-###hint( name, color )###
+####hint( name, color )####
 
 	// SCSS
 	@include hint(error, red);
@@ -69,7 +78,7 @@ For the next ones have a look at the 'creators'-section.
 	// HTML
 	<div class="hint-error">An error has occurred</div>
 
-###btn ( name )###
+####btn ( name )####
 
 	// SCSS
 	@include btn(valid) {
@@ -79,7 +88,7 @@ For the next ones have a look at the 'creators'-section.
 	// HTML
 	<button class="btn-valid">Send</button>
 
-###block( name, bgColor )###
+####block( name, bgColor )####
 Set's the font-color to the `best-font-color` (section: functions) of `bgColor`.
 
 	// SCSS
@@ -90,9 +99,9 @@ Set's the font-color to the `best-font-color` (section: functions) of `bgColor`.
 
 
 
-##Mixins##
+###Mixins###
 
-###Vendor-Prefixing###
+####Vendor-Prefixing####
 Only two examples... ;) Works with each css-property which needs vendor-prefixes.
 
 - *@mixin* **prefix**( $key, $value, $prefixes, $prefixless:true )
@@ -117,7 +126,7 @@ Only two examples... ;) Works with each css-property which needs vendor-prefixes
 		animation: myAnimation 300ms 0 ease;
 
 
-##Functions##
+###Functions###
 
 - *@function* brightness($color)
 
@@ -137,7 +146,10 @@ Only two examples... ;) Works with each css-property which needs vendor-prefixes
 
 
 
-
 ##Contact##
 
-plati - [mail@platdesign.de](mailto:mail@platdesign.de)
+- [mail@platdesign.de](mailto:mail@platdesign.de)
+- [platdesign](https://twitter.com/platdesign) on Twitter
+
+
+
