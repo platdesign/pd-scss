@@ -42,6 +42,8 @@
 			color:inherit;
 			cursor:default;
 			
+			white-space:nowrap;
+
 			&[disabled] {
 				opacity:.5;
 				pointer-events: none;
